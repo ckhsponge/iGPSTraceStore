@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "Trace.h"
+#import "Location.h"
 
 @interface ViewController ()
 
@@ -18,6 +21,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)printLocations:(id)sender {
+    Trace *trace = [AppDelegate instance].trace;
+    for( Location *location in trace.locations) {
+        NSLog(@"%@",location);
+    }
 }
 
 - (void)didReceiveMemoryWarning

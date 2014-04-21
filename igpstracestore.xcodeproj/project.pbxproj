@@ -21,6 +21,11 @@
 		5FF4011E1904CDA8006DD00F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF401001904CDA8006DD00F /* UIKit.framework */; };
 		5FF401261904CDA8006DD00F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FF401241904CDA8006DD00F /* InfoPlist.strings */; };
 		5FF401281904CDA8006DD00F /* igpstracestoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401271904CDA8006DD00F /* igpstracestoreTests.m */; };
+		5FF401331904CDEB006DD00F /* TraceData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401311904CDEB006DD00F /* TraceData.xcdatamodeld */; };
+		5FF401361904CF30006DD00F /* Trace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401351904CF30006DD00F /* Trace.m */; };
+		5FF401391904CF31006DD00F /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401381904CF31006DD00F /* Location.m */; };
+		5FF401861904D345006DD00F /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401851904D345006DD00F /* CoreDataStack.m */; };
+		5FF401891904E3F2006DD00F /* LocationUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF401881904E3F2006DD00F /* LocationUpdater.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,15 @@
 		5FF401231904CDA8006DD00F /* igpstracestoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "igpstracestoreTests-Info.plist"; sourceTree = "<group>"; };
 		5FF401251904CDA8006DD00F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5FF401271904CDA8006DD00F /* igpstracestoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = igpstracestoreTests.m; sourceTree = "<group>"; };
+		5FF401321904CDEB006DD00F /* TraceData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TraceData.xcdatamodel; sourceTree = "<group>"; };
+		5FF401341904CF30006DD00F /* Trace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trace.h; sourceTree = "<group>"; };
+		5FF401351904CF30006DD00F /* Trace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trace.m; sourceTree = "<group>"; };
+		5FF401371904CF31006DD00F /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		5FF401381904CF31006DD00F /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		5FF401841904D345006DD00F /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		5FF401851904D345006DD00F /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		5FF401871904E3F2006DD00F /* LocationUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationUpdater.h; sourceTree = "<group>"; };
+		5FF401881904E3F2006DD00F /* LocationUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationUpdater.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,15 @@
 				5FF401121904CDA8006DD00F /* ViewController.m */,
 				5FF401141904CDA8006DD00F /* Images.xcassets */,
 				5FF401031904CDA8006DD00F /* Supporting Files */,
+				5FF401311904CDEB006DD00F /* TraceData.xcdatamodeld */,
+				5FF401371904CF31006DD00F /* Location.h */,
+				5FF401381904CF31006DD00F /* Location.m */,
+				5FF401341904CF30006DD00F /* Trace.h */,
+				5FF401351904CF30006DD00F /* Trace.m */,
+				5FF401841904D345006DD00F /* CoreDataStack.h */,
+				5FF401851904D345006DD00F /* CoreDataStack.m */,
+				5FF401871904E3F2006DD00F /* LocationUpdater.h */,
+				5FF401881904E3F2006DD00F /* LocationUpdater.m */,
 			);
 			path = igpstracestore;
 			sourceTree = "<group>";
@@ -251,7 +274,12 @@
 			files = (
 				5FF401131904CDA8006DD00F /* ViewController.m in Sources */,
 				5FF4010D1904CDA8006DD00F /* AppDelegate.m in Sources */,
+				5FF401891904E3F2006DD00F /* LocationUpdater.m in Sources */,
+				5FF401861904D345006DD00F /* CoreDataStack.m in Sources */,
+				5FF401361904CF30006DD00F /* Trace.m in Sources */,
 				5FF401091904CDA8006DD00F /* main.m in Sources */,
+				5FF401391904CF31006DD00F /* Location.m in Sources */,
+				5FF401331904CDEB006DD00F /* TraceData.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +494,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5FF401311904CDEB006DD00F /* TraceData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5FF401321904CDEB006DD00F /* TraceData.xcdatamodel */,
+			);
+			currentVersion = 5FF401321904CDEB006DD00F /* TraceData.xcdatamodel */;
+			path = TraceData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5FF400F11904CDA8006DD00F /* Project object */;
 }

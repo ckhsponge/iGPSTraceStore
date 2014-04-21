@@ -7,12 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "Trace.h"
 
 @implementation AppDelegate
+
++(AppDelegate *) instance {
+	return (AppDelegate *) [[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.trace = [Trace findFirst];
+    if (!self.trace) {
+        NSManagedObjectContext *context = [[CoreDataStack instance] managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Trace" inManagedObjectContext:context];
+        self.trace = [[Trace alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+        self.trace.name = @"My only trace";
+        [[CoreDataStack instance] saveContext];
+    }
+    
+    self.locationUpdater = [[LocationUpdater alloc] init];
+    [self.locationUpdater start];
+    
     return YES;
 }
 							
